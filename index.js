@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import express from 'express'
 import bodyParser from 'body-parser'
 import { v4 as uuidv4 } from 'uuid';
@@ -69,3 +70,21 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
+=======
+// Import express module
+const express = require('express');
+
+// Create an instance of express
+const app = express();
+
+// Define a route for the root URL
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+// Start the server and listen on port 3000
+const PORT = 3018;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+>>>>>>> 7ba66f05d53a1d7df94d165b05f4cc66a6d3c0f8
