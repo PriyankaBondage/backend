@@ -28,6 +28,12 @@ app.get('/users', (req, res) => {
   res.status(200).send(users);
 });
 
+app.get('/', (req, res) => {
+    res.status(200).send({
+        message:"Hello World"
+    });
+  });
+
 // READ a specific user by ID
 app.get('/users/:id', (req, res) => {
   const user = users.find(u => u.id === req.params.id);
