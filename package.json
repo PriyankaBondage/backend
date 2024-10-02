@@ -1,7 +1,6 @@
 {
   "name": "backend",
   "version": "1.0.0",
-<<<<<<< HEAD
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -16,18 +15,5 @@
     "express": "^4.21.0",
     "nodemon": "^3.1.7",
     "uuid": "^10.0.0"
-=======
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.21.0",
-    "nodemon": "^3.1.7"
->>>>>>> 7ba66f05d53a1d7df94d165b05f4cc66a6d3c0f8
   }
 }
