@@ -1,5 +1,5 @@
-import express from 'express'
-import bodyParser from 'body-parser'
+import express from 'express';
+import bodyParser from 'body-parser';
 import { v4 as uuidv4 } from 'uuid';
 import cors from 'cors';
 
@@ -7,6 +7,7 @@ import cors from 'cors';
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+
 // In-memory data store
 let users = [];
 
@@ -24,15 +25,9 @@ app.post('/users', (req, res) => {
 });
 
 // READ all users
-// app.get('/users', (req, res) => {
-//   res.status(200).send(users);
-// });
-
-app.get('/', (req, res) => {
-    res.status(200).send({
-        message:"Hello World"
-    });
-  });
+app.get('/users', (req, res) => {
+  res.status(200).send(users);
+});
 
 // READ a specific user by ID
 app.get('/users/:id', (req, res) => {
@@ -65,7 +60,7 @@ app.delete('/users/:id', (req, res) => {
     return res.status(404).send({ message: 'User not found' });
   }
 
-  const deletedUser = users.splice(userIndex, 1);
+  const [deletedUser] = users.splice(userIndex, 1);
   res.status(200).send(deletedUser);
 });
 
@@ -74,4 +69,3 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
