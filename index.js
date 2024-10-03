@@ -24,9 +24,9 @@ app.post('/users', (req, res) => {
 });
 
 // READ all users
-app.get('/users', (req, res) => {
-  res.status(200).send(users);
-});
+// app.get('/users', (req, res) => {
+//   res.status(200).send(users);
+// });
 
 app.get('/', (req, res) => {
     res.status(200).send({
