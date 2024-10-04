@@ -71,7 +71,7 @@ app.get('/users/:phone_number', (req, res) => {
   });
 });
 
-// UPDATE a user by phone_number
+// UPDATE a user by phone_numberata
 app.patch('/users/:phone_number', (req, res) => {
 
   const phone_number = req.params.phone_number;
